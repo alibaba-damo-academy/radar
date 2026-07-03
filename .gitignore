@@ -6,6 +6,6 @@ __pycache__
 *.bin
 *.safetensors
 training_results
-# bert-base-chinese
-# bert-base-uncased
+bert-base-chinese
+bert-base-uncased
 # merlin_report.json
