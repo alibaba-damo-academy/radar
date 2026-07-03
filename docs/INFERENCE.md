@@ -20,9 +20,9 @@ This document covers running inference with RADAR, including a quick demo and ev
 | File                                      | Description                                          | Destination                                                  |
 | ----------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
 | Pretrained checkpoint                     | RADAR model weights                                  | `radar/RADAR_inference/checkpoint/checkpoint_radar_pretrain.pth`   |
-| Demo cases                                | Sample CT examinations                               | `radar/RADAR_inference/demo_cases/`                                |
 | `bert-base-chinese`                       | BERT tokenizer and model                             | `radar/RADAR_inference/configs/bert-base-chinese/`                 |
-| `RADAR_infer_results_MerlinTestset.csv`   | The inference results of RADAR on Merlin-CT-Test set | `radar/RADAR_inference/RADAR_infer_results_MerlinTestset.csv`      |
+<!-- | `RADAR_infer_results_MerlinTestset.csv`   | The inference results of RADAR on Merlin-CT-Test set | `radar/RADAR_inference/RADAR_infer_results_MerlinTestset.csv`      | -->
+<!-- | Demo cases                                | Sample CT examinations                               | `radar/RADAR_inference/demo_cases/`                                | -->
 
 All files are available on HuggingFace.
 
