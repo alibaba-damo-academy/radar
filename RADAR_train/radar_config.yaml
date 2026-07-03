@@ -1,0 +1,52 @@
+model:
+  arch: radar_pretrain
+  load_pretrained: False
+  load_finetuned: False
+  
+  # bert config
+  med_config_path:  "bert-base-uncased/config.json"
+
+  max_txt_len: 512
+  queue_size: 0
+  alpha: 0.4
+  radar_plus: True
+  radar_ft: False
+
+datasets:
+  radar_dataset:
+    vis_processor:
+        train:
+          name: "radar_image_processor"
+    text_processor:
+        train:
+          name: "radar_report_processor"
+    data_type: images
+
+run:
+  task: image_text_pretrain
+  lr_sched: "linear_warmup_cosine_lr"
+  init_lr: 1e-4
+  min_lr: 1e-6
+  warmup_lr: 1e-6
+
+  weight_decay: 0.05
+  max_epoch: 30
+  batch_size_train: 2  # we using 24 GPU with a total batch size of 48
+  batch_size_eval: 32
+  num_workers: 8
+  warmup_steps: 3000
+  log_freq: 10
+
+  seed: 42
+  output_dir: "../training_results"
+
+  amp: False
+  resume_ckpt_path:
+
+  evaluate: False
+  train_splits: ["train"]
+
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True
