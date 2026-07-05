@@ -22,8 +22,8 @@ pip install -r requirements.txt
 
 ## HuggingFace
 
-- The pre-trained checkpoints and supports files are available on [HuggingFace](https://huggingface.co/radar-generalist).
-- For convenience, we have provided the demo nifty, processed merlin-related reports and labels, predicted results in csv format in this repo. The supporting files required for inferecnce demo and training can be downloaded from HuggingFace.
+- The pre-trained checkpoints and supporting files are available on [HuggingFace](https://huggingface.co/radar-generalist).
+- For convenience, we have provided the demo nifty, processed Merlin-related reports and labels, and predicted results in CSV format in this repo. The supporting files required for inference demo and training can be downloaded from HuggingFace.
 
 ---
 
@@ -33,8 +33,8 @@ For detailed instructions, please refer to the following guides:
 
 | Guide                         | Description                                                                                                                               |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [Inference](docs/INFERENCE.md) | 1. An inference demo with radar pre-trained checkpoint on RAD-CT, and 2. Inference and evaluate radar' performence on the external MERLIN test set. |
-| [Training](docs/TRAINING.md)   | Train RADAR/RADAR+ from scratch or fine-tuning on MERLIN data, inference and evaluation also included.                                                   |
+| [Inference](docs/INFERENCE.md) | 1. An inference demo with a radar pre-trained checkpoint on RAD-CT, and 2. Inference and evaluation of radar performance on the external MERLIN test set. |
+| [Training](docs/TRAINING.md)   | Train RADAR/RADAR+ from scratch or fine-tune on MERLIN data; inference and evaluation are also included.                                                   |
 
 ---
 
