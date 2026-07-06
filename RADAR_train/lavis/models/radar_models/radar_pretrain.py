@@ -471,7 +471,7 @@ class RadarPretrain(RadarBase, SharedQueueMixin, MomentumDistilationMixin):
         
         if radar_ft:
             # load RADAR pretrained ckpt
-            ckpt_path = '../RADAR_inference/checkpoint/checkpoint_radar_pretrain.pth'
+            ckpt_path = '../ckpt/checkpoint_radar_pretrain.pth'
             ckpt = torch.load(ckpt_path, map_location='cpu')
 
             from collections import OrderedDict
