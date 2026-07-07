@@ -19,7 +19,7 @@ test_items = list(results.columns[1:])
 
 all_aucs = []
 for i, test_item in enumerate(test_items):
-    organ, disease = test_item.split('_')
+    organ, disease = test_item.split('_')[:2]
     gt_labels = []
     pd_scores = []
     label_json = all_labels[map_radar_merlin[f'{organ}_{disease}']]
@@ -42,14 +42,14 @@ for i, test_item in enumerate(test_items):
         pd_scores.append(prob)
 
     # using seg for 胆囊_术后胆囊缺失/surgically_absent_gallbladder
-    if test_item == '胆囊_术后胆囊缺失':  # surgically_absent_gallbladder
+    if f'{organ}_{disease}' == '胆囊_术后胆囊缺失':  # surgically_absent_gallbladder
         model_pred = np.array(pd_scores)
         model_pred = (model_pred<1000).astype(np.float32).tolist()
         pd_scores = model_pred
     
     # compute auc
     diease_auc = roc_auc_score(gt_labels, pd_scores)
-    print(map_radar_merlin[test_item], np.round(diease_auc, 4))
+    print(map_radar_merlin[f'{organ}_{disease}'], np.round(diease_auc, 4))
     all_aucs.append(diease_auc)
     
 print(f'AvgAUC: {np.mean(all_aucs):.4f}')

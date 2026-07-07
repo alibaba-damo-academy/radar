@@ -163,7 +163,7 @@ class DataFolder(Dataset):
         # }
         
         self.test_items = ['主动脉_主动脉瘤', '主动脉_粥样硬化', '大肠_粘膜下水肿', '大肠_阑尾炎', '小肠_梗阻', '心脏_主动脉瓣钙化', '心脏_心影（脏）增大', '肝_肝内胆管扩张', '肝_肝大', '肝_脂肪肝', '肺_胸腔积液', '肺_膨胀不全', '肾_低密度影', '肾_囊肿', '肾_肾积水', '胆囊_结石', '胰腺_萎缩', '脾_脾大', '腰椎_骨折', '食管_裂孔疝', '胆囊_术后胆囊缺失']
-        # map_radar_merlin = {'主动脉_主动脉瘤': 'abdominal_aortic_aneurysm', '主动脉_粥样硬化': 'atherosclerosis', '大肠_粘膜下水肿': 'submucosal_edema', '大肠_阑尾炎': 'appendicitis', '小肠_梗阻': 'bowel_obstruction', '心脏_主动脉瓣钙化': 'aortic_valve_calcification', '心脏_心影（脏）增大': 'cardiomegaly', '肝_肝内胆管扩张': 'biliary_ductal_dilation', '肝_肝大': 'hepatomegaly', '肝_脂肪肝': 'hepatic_steatosis', '肺_胸腔积液': 'pleural_effusion', '肺_膨胀不全': 'atelectasis', '肾_低密度影': 'renal_hypodensities', '肾_囊肿': 'renal_cyst', '肾_肾积水': 'hydronephrosis', '胆囊_结石': 'gallstones', '胰腺_萎缩': 'pancreatic_atrophy', '脾_脾大': 'splenomegaly', '腰椎_骨折': 'fracture', '食管_裂孔疝': 'hiatal_hernia', '胆囊_术后胆囊缺失': 'surgically_absent_gallbladder'}
+        self.map_radar_merlin = {'主动脉_主动脉瘤': 'abdominal_aortic_aneurysm', '主动脉_粥样硬化': 'atherosclerosis', '大肠_粘膜下水肿': 'submucosal_edema', '大肠_阑尾炎': 'appendicitis', '小肠_梗阻': 'bowel_obstruction', '心脏_主动脉瓣钙化': 'aortic_valve_calcification', '心脏_心影（脏）增大': 'cardiomegaly', '肝_肝内胆管扩张': 'biliary_ductal_dilation', '肝_肝大': 'hepatomegaly', '肝_脂肪肝': 'hepatic_steatosis', '肺_胸腔积液': 'pleural_effusion', '肺_膨胀不全': 'atelectasis', '肾_低密度影': 'renal_hypodensities', '肾_囊肿': 'renal_cyst', '肾_肾积水': 'hydronephrosis', '胆囊_结石': 'gallstones', '胰腺_萎缩': 'pancreatic_atrophy', '脾_脾大': 'splenomegaly', '腰椎_骨折': 'fracture', '食管_裂孔疝': 'hiatal_hernia', '胆囊_术后胆囊缺失': 'surgically_absent_gallbladder'}
         self.test_organs = list(set([item.split('_')[0] for item in self.test_items]))
     
     def __len__(self):
@@ -567,7 +567,7 @@ def evaluate(pad_func, model, img_dir, save_dir, save_tag):
     
     pd.DataFrame(
         results,
-        columns=['file_name'] + [k for k in datafolder.test_items]
+        columns=['file_name'] + [f'{k}_({datafolder.map_radar_merlin[k]})' for k in datafolder.test_items]
     ).to_csv(save_path, index=False, encoding='utf-8-sig')
 
 def initialize():
@@ -622,7 +622,7 @@ def inference(initialize_returns, img_dir, save_dir, save_tag):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--img_dir', type=str, default='/Merlin/download/merlinabdominalctdataset/merlin_data', help='The path to inference image folder.')
+    parser.add_argument('--img_dir', type=str, default='/mnt/nas/xiuxia/data/VLP/Merlin/download/merlinabdominalctdataset/merlin_data', help='The path to inference image folder.')
     parser.add_argument('--save_dir', type=str, default='../results', help='The path to save folder.')
     parser.add_argument('--save_tag', type=str, default='MerlinTestset', help='Save tag.')
     
