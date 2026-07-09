@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ---
 ## Zenodo
-Code and checkpoints are also archived on [Zenodo](https://zenodo.org/records/20437705).
+Code can also be archived on [Zenodo](https://zenodo.org/records/20437705).
 
 ---
 
