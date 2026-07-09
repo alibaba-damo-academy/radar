@@ -23,9 +23,15 @@ pip install -r requirements.txt
 ## HuggingFace
 
 - The pre-trained checkpoints and supporting files are available on [HuggingFace](https://huggingface.co/radar-generalist).
-- For convenience, we have provided the demo nifty, processed Merlin-related reports and labels, and predicted results in CSV format in this repo. The supporting files required for inference demo and training can be downloaded from HuggingFace.
+- For convenience, we have provided the demo nifty, processed Merlin-related reports and labels, and predicted results in CSV format in this repo. The supporting files required for the inference demo and training can be downloaded from HuggingFace.
 
 ---
+## Zenodo
+Code and checkpoints are also archived on [Zenodo](https://zenodo.org/records/20437705).
+
+---
+
+
 
 ## Documentation
 
