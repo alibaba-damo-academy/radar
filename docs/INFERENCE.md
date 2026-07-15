@@ -45,8 +45,8 @@ We have provided a demo nifty, the results will be saved as `RADAR_infer_results
 
 - Download the MERLIN dataset from the [Stanford AIMI Shared Datasets](https://stanfordaimi.azurewebsites.net/datasets/60b9c7ff-877b-48ce-96c3-0194c8205c40).
 - Modify `--img_dir` to the MERLIN data path on your local device in `inference_merlin_testset.py`.
-- We provide all MERLIN reports in JSON format (`merlin_report.json`), which includes the test split information.
-- The labels have also been converted to JSON format for convenience (`merlin_labels.json`).
+- Getting merlin report (`merlin_report.json`) with JSON format using `ckpt/transform_report_to_json.py` and official `reports_final.xlsx`, which includes the test split information.
+- Getting labels (`merlin_labels.json`) with JSON format using `ckpt/transform_label_to_json.py` and official `zero_shot_findings_disease_cls.csv`.
 
 ### (2) Run Inference
 
