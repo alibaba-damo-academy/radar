@@ -12,7 +12,6 @@ This document covers training RADAR/RADAR+ on Merlin-CT-Train set from scratch o
 - [Training](#2-training)
 - [Inference](#3-inference)
 - [Evaluation](#4-evaluation)
-- [Others](#others)
 
 ---
 

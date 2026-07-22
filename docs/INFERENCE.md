@@ -9,7 +9,7 @@ This document covers 1. an inference demo with RADAR pre-trained checkpoint on R
 ## Table of Contents
 
 - [Inference Demo](#1-inference-demo)
-- [Inference on the external MERLIN Test Set](#(Optional)-2-inference-on-the-external-merlin-test-set)
+- [Inference on the external MERLIN Test Set](#optional-2-inference-on-the-external-merlin-test-set)
 
 ---
 

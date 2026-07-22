@@ -55,8 +55,18 @@ For detailed instructions, please refer to the following guides:
 
 This project is built upon the following open-source projects:
 
-- [LAVIS](https://github.com/salesforce/LAVIS)
-- [nnU-Net](https://github.com/MIC-DKFZ/nnUNet)
+- [LAVIS](https://github.com/salesforce/LAVIS) (BSD 3-Clause License)
+- [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) (Apache License 2.0)
+- [MONAI](https://github.com/Project-MONAI/MONAI) (Apache License 2.0)
+- [3D-ResNets-PyTorch](https://github.com/kenshohara/3D-ResNets-PyTorch) (MIT License)
+
+---
+
+## License
+
+This project is released under the [Apache License 2.0](LICENSE).
+
+Portions of the code are derived from third-party open-source projects that are distributed under their own licenses (see the [Acknowledgements](#acknowledgements) above). Their original license texts are retained in [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
 
 ---
 
